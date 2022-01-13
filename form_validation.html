@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>User Form</title>
+   </head>
+	
+   <body>
+      <script>  
+         function validateform(){  
+         var name=document.myform.name.value;  
+         var password=document.myform.password.value;  
+           
+         if (name==null || name==""){  
+           alert("Name can't be blank");  
+           return false;  
+         }else if(password.length<6){  
+           alert("Password must be at least 6 characters long.");  
+           return false;  
+           }  
+         }  
+         </script>  
+         <body>  
+         <form name="myform" method="post" action="abc.jsp" onsubmit="return validateform()" >  
+         Name: <input type="text" name="name"><br/>  
+         Password: <input type="password" name="password"><br/>  
+         
+         
+      
+         
+         Gender : <input type = "radio" name = "gender" value = "male"> Male
+         <input type = "radio" name = "gender" value = "female"> Female
+         <br /><br>
+         Address : 
+         <textarea rows = "5" cols = "50" name = "address">
+            
+         </textarea>
+         <br><br>
+         D.O.B: <input type = "date">   
+         <br> <br>
+         Select Games : <input type = "checkbox" name = "game" value = "hockey"> Hockey
+         <input type = "checkbox" name = "game" value = "football"> Football
+         <input type = "checkbox" name = "game" value = "Cricket"> Cricket
+         <input type = "checkbox" name = "game" value = "VolleyBall"> VolleyBall
+
+         <br> <br>
+         Marital Status : <input type = "radio" name = "marital" value = "married"> Married
+         <input type = "radio" name = "marital" value = "unmarried"> Unmarried
+         <br><br>
+         <button type="submit" value="Submit">Submit</button>
+  <button type="reset" value="Reset">Reset</button>
+  <br><br>
+  <input type="checkbox" id="accept" name="accept" value="accept">
+<label for="accept"> I accept this agreement</label><br>
+      </form>
+   </body>
+	
+</html>
